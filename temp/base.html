@@ -1,0 +1,15 @@
+<header>
+    <a href="{% url 'home' %}">HomePage</a>
+    <a href="{% url 'about' %}">AboutPage</a>
+
+</header>
+
+<h1>Xabar ulashish sahifasi</h1>
+<ul>
+    {% for post in barcha_postlar %}
+    <li>{{ post.text }}</li>
+    {% endfor %}
+</ul>
+{% block content %}
+
+{% endblock content %}
